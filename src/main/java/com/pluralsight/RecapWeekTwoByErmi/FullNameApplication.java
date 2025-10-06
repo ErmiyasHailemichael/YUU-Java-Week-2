@@ -20,8 +20,8 @@ public class FullNameApplication {
         String lastName = scanner.nextLine();
 //        System.out.println("You entered " + lastName +" as your last name");
 
-//        System.out.println("You entered " + firstName + " " + middleInitial + " and " + lastName);
+        //
 
-//
+//        System.out.println("You entered " + firstName + " " + middleInitial + " and " + lastName);
     }
 }
