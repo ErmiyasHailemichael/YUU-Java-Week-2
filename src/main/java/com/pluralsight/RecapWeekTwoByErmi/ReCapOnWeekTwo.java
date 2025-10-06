@@ -5,17 +5,18 @@ import java.util.Scanner;
 public class ReCapOnWeekTwo {
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
-        UserInput();
-        StringMethods();
-        LengthStringMethod();
-        TrimStringMethods();
-        ConvertAStringToUpperCase();
-        ChainingStringMethodsTogether();
+//        UserInput();
+//        StringMethods();
+//        LengthStringMethod();
+//        TrimStringMethods();
+//        ConvertAStringToUpperCase();
+//        ChainingStringMethodsTogether();
         ParticularSubString();
         ParticularSubString2();
         CharacterPosition();
         SubStringBegins();
         SubstringFromLargeString();
+        SubstringFromLargeString2();
     }
 
     public static void UserInput() {
@@ -111,6 +112,20 @@ public class ReCapOnWeekTwo {
         String vendor = productCode.substring(0, dashPosition);
         String productNum = productCode.substring(dashPosition + 1);
         System.out.println(vendor + "  " + productNum);
+    }
 
+    // You can split a string based on a regular expression that describes the delimiter. The
+    //pipe character has special meaning in regular expressions, so we had to escape it in this
+    //example
+    public static void SubstringFromLargeString2() {
+        String input = "Dallas|Ft. Worth|Austin";
+        String[] cities = input.split("\\|");
+// cities is an array containing 3 strings
+// [0] is Dallas, [1] is Ft. Worth, [2] is Austin
+        System.out.println("The cities are " + cities[0] + " and " + cities[1]);
+
+        // Alternatively we could have coded the following. The Pattern.quote() method
+        //returns a regular expression for the pipe.
+//        String[] cities = input.split(Pattern.quote("|"));
     }
 }
